@@ -1,15 +1,12 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Welcome to Astro.">
+<div id="hero" class="max-w-5xl text-center space-y-4 py-4">
+	<h1 class="font-bold text-4xl md:text-5xl xl:text-8xl">Hey, I'm Martin</h1>
+	<h3 class="font-sans text-2xl max-w-xs md:max-w-sm xl:max-w-full xl:text-3xl">Crafting web apps that rock, resonating with the rhythm of innovation, and summiting the peaks of open-source.</h3>
+</div>
+
+</Layout>

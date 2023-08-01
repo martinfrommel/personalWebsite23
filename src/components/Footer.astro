@@ -1,0 +1,12 @@
+---
+interface Props {
+    className?: string;
+}
+
+const {className} = Astro.props;
+---
+
+<footer class={className}>
+
+<h5 class="text-lg font-bold">I'm a footer and this is my fallback content</h5>
+</footer>

@@ -1,0 +1,13 @@
+---
+import Navbar from './Navbar.astro';
+interface Props {
+    className?: string;
+}
+
+const {className} = Astro.props;
+---
+
+<header class={className}>
+    <Navbar />
+    <!-- <h5 class="text-lg font-bold">I'm a header and this is fallback content</h5> -->
+</header>

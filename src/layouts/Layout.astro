@@ -1,0 +1,102 @@
+--- 
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import '@fontsource-variable/eb-garamond';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<BaseHead title={title}/>
+
+	<body class="overflow-hidden flex flex-col flex-nowrap items-center justify-between">
+		<Header className=' my-5 p-3' />
+		<main class="w-full h-fit flex flex-wrap flex-col items-center justify-center p-3">
+			<slot />
+		</main>
+		<Footer className='my-5 p-3'>
+			
+		</Footer>
+	</body>
+</html>
+<style is:global>
+	/* Font imports */
+	@font-face {
+    font-family: 'Rockwell';
+    src: local('Rockwell Bold Italic'), local('Rockwell-BoldItalic'),
+        url('fonts/subset-Rockwell-BoldItalic.woff2') format('woff2'),
+        url('fonts/subset-Rockwell-BoldItalic.woff') format('woff'),
+        url('fonts/subset-Rockwell-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rockwell';
+    src: local('Rockwell-Bold'),
+        url('fonts/subset-Rockwell-Bold.woff2') format('woff2'),
+        url('fonts/subset-Rockwell-Bold.woff') format('woff'),
+        url('fonts/subset-Rockwell-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rockwell';
+    src: local('Rockwell'), local('Rockwell-Regular'),
+        url('fonts/subset-Rockwell-Regular.woff2') format('woff2'),
+        url('fonts/subset-Rockwell-Regular.woff') format('woff'),
+        url('fonts/subset-Rockwell-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rockwell';
+    src: local('Rockwell Italic'), local('Rockwell-Italic'),
+        url('fonts/subset-Rockwell-Italic.woff2') format('woff2'),
+        url('fonts/subset-Rockwell-Italic.woff') format('woff'),
+        url('fonts/subset-Rockwell-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+	:root {
+		--text-primary: #303037;
+		@apply text-base;
+	}
+	html {
+		width: 100vw;
+		height: 100vh;
+		background: url("../assets/bg/bgDoodles.svg") no-repeat center/cover fixed, #e2e9e0;
+		background-blend-mode: overlay;
+		color: var(--text-primary);
+	}
+	
+	h1, h2, h3 {
+		@apply font-serif;
+	}
+	
+	h4, h5, h6 {
+		@apply font-sans;
+	}
+
+	body {
+		@apply min-w-full min-h-full font-sans text-base;
+	}
+	
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+</style>
