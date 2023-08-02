@@ -15,7 +15,7 @@ export default defineConfig({
     prefetch(),
     sitemap(),
     tailwind(),
-    alpinejs(),
+    // alpinejs(),
   ],
   experimental: {
     viewTransitions: true,
