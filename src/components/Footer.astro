@@ -1,7 +1,8 @@
 ---
 import Monogram from './Monogram.astro';
 import DarkModeToggle from './darkModeToggle.astro';
-import IconBar from './IconBar.astro'
+import BottomMenu from './BottomMenu.astro'
+import Tooltip from './Tooltip.astro';
 interface Props {
     className?: string;
 }
@@ -11,6 +12,6 @@ const {className} = Astro.props;
 
 <footer class={className}>
     <DarkModeToggle />
-    <IconBar />
-<Monogram className=''/>
+    <BottomMenu />
+    <Tooltip tooltipArrow={true} tooltipText='Made with ❤️ in 🇨🇿' tooltipPosition={"left"} tooltipClassName='dark:bg-[#e2e9e0] dark:text-[#303037] bg-[#303037] text-[#e2e9e0] font-mono '><Monogram className='xl:w-24'/></Tooltip>
 </footer>

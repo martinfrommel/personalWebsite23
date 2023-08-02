@@ -1,0 +1,75 @@
+---
+import Modal from "./Modal.astro";
+import FullScreenModal from "./FullScreenModal.astro";
+import ProjectsList from "./ProjectsList.astro";
+
+type TailwindSpacing = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 14 | 16 | 20 | 24 | 28 | 32 | 36 | 40 | 44 | 48 | 52 | 56 | 60 | 64 | 72 | 80 | 96;
+
+interface Props {
+  size: TailwindSpacing;
+  className?: string;
+}
+
+const { size, className } = Astro.props;
+---
+
+<!-- Music Credits -->
+<FullScreenModal id={2} title="Music Credits">
+  <div
+    slot="trigger"
+    class="flex flex-col flex-none justify-center items-center flex-wrap"
+  >
+    <svg
+      slot="trigger"
+      class={`h-${size} w-auto ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >    
+
+    <path
+      fill="currentColor"
+      d="M8 4h12v16h-8v-8h6V8h-8v12H2v-8h6V4zm0 10H4v4h4v-4zm10 0h-4v4h4v-4z"
+    ></path>
+  </svg>  <span class="font-mono xl:text-lg">Music</span>
+  </div>
+  <section id="musicPlaylist"></section>
+</FullScreenModal>
+<!-- GitHub -->
+<a
+  ><div
+    slot="trigger"
+    class="flex flex-col flex-none justify-center items-center flex-wrap"
+  >
+    <svg
+      class={`h-${size} w-auto ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="currentColor"
+        d="M10 2H2v8h3v12h2V10h3v2h2v2h2v8h8v-8h-8v-2h-2v-2h-2V2zM4 8V4h4v4H4zm12 12v-4h4v4h-4z"
+      ></path>
+    </svg><span class="font-mono xl:text-lg">GitHub</span>
+  </div>
+</a>
+<!-- Projects -->
+<FullScreenModal id={1} title="Projects">
+  <div
+    slot="trigger"
+    class="flex flex-col flex-none justify-center items-center flex-wrap"
+  >
+    <svg
+      class={`h-${size} w-auto ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="currentColor"
+        d="M8 3h8v4h6v14H2V7h6V3zm2 4h4V5h-4v2zM4 9v10h16V9H4z"></path>
+    </svg>
+    <span class="font-mono xl:text-lg">Projects</span>
+  </div>
+  <ProjectsList />
+</FullScreenModal>
+
+<style></style>

@@ -9,6 +9,7 @@ module.exports = {
       fontFamily: {
         sans: ["EB Garamond Variable"],
         serif: ["Rockwell"],
+        mono: ["VT323"],
       },
     },
   },
