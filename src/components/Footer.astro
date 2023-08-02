@@ -1,6 +1,7 @@
 ---
 import Monogram from './Monogram.astro';
 import DarkModeToggle from './darkModeToggle.astro';
+import IconBar from './IconBar.astro'
 interface Props {
     className?: string;
 }
@@ -10,5 +11,6 @@ const {className} = Astro.props;
 
 <footer class={className}>
     <DarkModeToggle />
+    <IconBar />
 <Monogram className=''/>
 </footer>
