@@ -1,20 +1,24 @@
 ---
 import { Image } from 'astro:assets';
-import practicalWisdomLogo from '../assets/logos/practicalWisdomLogo.png'
+import PracticalWisdomLogo from '../assets/logos/practicalWisdomLogo.astro'
+import UlitaLogo from '../assets/logos/ulitaLogo.astro'
+import PruvodceBroumovemLogo from '../assets/logos/pruvodceBroumovemLogo.astro'
+
+
 ---
 
-<div class="">
-    <div class="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
-            <div class="col-span-1 flex items-center justify-center md:col-span-2 lg:col-span-1">
-                <!-- <Image class={"h-sm will-change-auto"} src={practicalWisdomLogo} width={practicalWisdomLogo.width} height={practicalWisdomLogo.height} format="webp" alt={"Practical Wisdom"} />             -->
-            </div>
-            <div class="col-span-1 flex items-center justify-center md:col-span-2 lg:col-span-1">
-                <!-- SVG content -->
-            </div>
-            <div class="col-span-1 flex items-center justify-center md:col-span-2 lg:col-span-1">
-                <!-- SVG content -->
-            </div>
-        </div>
-    </div>
+<div aria-label="Featured Collaborators" class="flex flex-row flex-shrink flex-nowrap space-x-4 items-center justify-between">
+    <PracticalWisdomLogo className='max-h-32' />
+    <UlitaLogo className='max-h-32' />
+    <PruvodceBroumovemLogo className='max-h-32'  />
 </div>
+
+<style>
+    .featuredLogo {
+        @apply dark:fill-[#e2e9e0] fill-[#303037] transition-all ease-in-out;
+    };
+
+    .featuredLogo #light {
+        @apply dark:fill-[#303037] fill-[#e2e9e0] transition-all ease-in-out;
+    };
+</style>
