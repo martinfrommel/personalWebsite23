@@ -1,6 +1,4 @@
-import { defineConfig } from 'astro/config';
-
-import image from "@astrojs/image";
+import { defineConfig } from "astro/config";
 // import partytown from "@astrojs/partytown";
 import prefetch from "@astrojs/prefetch";
 import sitemap from "@astrojs/sitemap";
@@ -10,7 +8,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [
-    image(),
     // partytown(),
     prefetch(),
     sitemap(),
@@ -19,5 +16,6 @@ export default defineConfig({
   ],
   experimental: {
     viewTransitions: true,
+    assets: true,
   },
 });

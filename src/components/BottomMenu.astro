@@ -6,11 +6,18 @@ import MenuItems from './MenuItems.astro'
 
 <div class="flex flex-col justify-center items-center" x-data="{ show: false }">
 
-    <div x-cloak x-transition x-show="show" class=" w-fit flex flex-row flex-none justify-evenly items-center p-4 space-x-4 rounded-lg absolute z-10 bottom-14 xl:bottom-24 bg-[#303037]/20 dark:bg-[#e2e9e0]/20">
-      <MenuItems className='lg:h-14 lg:w-14' size={8} />
+   <!-- Large Screen -->
+   <div x-cloak x-transition class="max-h-full w-auto hidden sm:portrait:flex lg:flex flex-row flex-none justify-evenly items-center py-4 px-8 space-x-4 rounded-lg z-10 bg-[#303037]/20 dark:bg-[#e2e9e0]/20 backdrop-blur-sm">
+    <MenuItems className='' size={"4rem"} />
+  </div>
+
+  <!-- Small Screen -->
+    <div x-cloak x-transition x-show="show" class=" w-fit flex flex-row flex-none justify-evenly items-center py-4 px-8 space-x-4 rounded-lg absolute z-10 bottom-14 xl:bottom-24 bg-[#303037]/20 dark:bg-[#e2e9e0]/20 backdrop-blur-sm">
+      <MenuItems size={"2rem"} />
     </div>
 
-    <div>
+  <!-- Hamburger Toggle -->
+    <div class="sm:portrait:hidden lg:hidden">
         <svg  x-cloak x-show="show = !show" class="hover:cursor-pointer xl:h-12 xl:w-12" @click="show = !show" xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
           <path fill="currentColor" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm16 5H4v2h16v-2z"/>
         </svg>
