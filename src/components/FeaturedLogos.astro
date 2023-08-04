@@ -1,24 +1,45 @@
 ---
-import { Image } from 'astro:assets';
-import PracticalWisdomLogo from '../assets/logos/practicalWisdomLogo.astro'
-import UlitaLogo from '../assets/logos/ulitaLogo.astro'
-import PruvodceBroumovemLogo from '../assets/logos/pruvodceBroumovemLogo.astro'
+import { Image } from "astro:assets";
+import PracticalWisdomLogo from "../assets/logos/practicalWisdomLogo.astro";
+import UlitaLogo from "../assets/logos/ulitaLogo.astro";
+import PruvodceBroumovemLogo from "../assets/logos/pruvodceBroumovemLogo.astro";
 
+interface Props {
+  className?: string;
+  fullDescription?: boolean;
+}
 
+const {
+  className = "flex flex-row justify-evenly items-center space-x-6 h-full text-left",
+  fullDescription = false,
+} = Astro.props;
 ---
 
-<div aria-label="Featured Collaborators" class="flex flex-row flex-shrink flex-nowrap space-x-4 items-center justify-between">
-    <PracticalWisdomLogo className='max-h-32' />
-    <UlitaLogo className='max-h-32' />
-    <PruvodceBroumovemLogo className='max-h-32'  />
-</div>
+<ul aria-label="Featured Collaborators" class={className}>
+  <li class="max-w-lg">
+    <a href="https://practicalwisdom.uk" target="_blank"
+      ><PracticalWisdomLogo className="md:max-h-32 max-h-28 my-4" /></a
+    >
+    {
+      fullDescription ? (
+        <div><hr/>
+          <h3 class="my-2 xs:my-5 text-md xs:text-lg"><span>Assignment:</span>&nbsp;Website design and development</h3><hr/>
+          <p class="text-lg font-mono py-4">{"Practical Wisdom is a coaching non-profit with a big heart and an even bigger mission. I had the privilege of designing and developing their WordPress site, creating an online platform that truly reflects their dedication to changing lives. Behind the scenes, I streamlined their IT workflow, managing systems, email servers, CRM, and marketing. This project was a great opportunity to demonstrate my technical skills while supporting a cause I believe in."}</p>
+        </div>
+      ) : (
+        ""
+      )
+    }
+  </li>
+ 
 
-<style>
+  <style>
     .featuredLogo {
-        @apply dark:fill-[#e2e9e0] fill-[#303037] transition-all ease-in-out opacity-90;
-    };
+      @apply dark:fill-light fill-dark transition-all ease-in-out opacity-90;
+    }
 
     .featuredLogo #light {
-        @apply dark:fill-[#303037] fill-[#e2e9e0] transition-all ease-in-out;
-    };
-</style>
+      @apply dark:fill-dark fill-light transition-all ease-in-out;
+    }
+  </style>
+</ul>
