@@ -17,5 +17,6 @@ A free-time non-profit company in the Czech Republic offering a range of courses
 An EU-sponsored, non-profit project offering a guided tour through the lovely historic town of Broumov. I developed a website using Astro, AlpineJS, and Netlify, creating an engaging and educational experience for users.
 
 ## 📬 Get in Touch
-I'm currently open to new opportunities and would love to hear from you! Feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/your-linkedin-profile) or via email at your-email@example.com.
+I'm currently open to new opportunities and would love to hear from you! Feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/martin-frommel) or via email at martin@mixdock.co.uk.
+
 
