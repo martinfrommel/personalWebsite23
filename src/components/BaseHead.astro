@@ -11,14 +11,14 @@ const {title, description = "Discover the portfolio of a seasoned web developer 
 ---
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <Analytics />
     <meta charset="UTF-8" />
     <meta name="description" content=`${description}`>
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/webp" href="/favicon.webp" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-
     <ViewTransitions />
 </head>
-<!-- Google tag (gtag.js) -->
-<Analytics />
+
