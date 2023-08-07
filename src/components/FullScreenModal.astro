@@ -21,11 +21,11 @@ const { title, subtitle, id } = Astro.props;
     <div
       x-show="fullscreenModal"
       x-transition
-      class="fullScreenModal flex fixed inset-0 z-[99] w-screen h-screen dark:bg-[#303037]/80 bg-[#e2e9e0]/60 backdrop-blur-md"
+      class="fullScreenModal flex fixed inset-0 z-[99] py-2 w-screen max-h-screen dark:bg-dark/80 bg-light/60 backdrop-blur-md overflow-auto px-5 scrollbar-hide"
     >
       <button
         @click="fullscreenModal=false"
-        class="absolute top-0 right-0 z-30 flex items-center justify-center px-3 py-2 mt-3 mr-3 space-x-1 text-xs rounded-md"
+        class="absolute top-0 right-0 z-30 flex items-center justify-center  p-1 m-2 space-x-1 text-xs rounded-full hover:dark:bg-light/20 hover:bg-dark/20 active:scale-75 transition-all duration-100"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -39,12 +39,12 @@ const { title, subtitle, id } = Astro.props;
         >
       </button>
       <div
-        class="relative flex flex-col flex-wrap items-center justify-center w-full h-full px-8 py-5"
+        class="relative flex flex-col flex-nowrap items-center justify-evenly w-full overflow-auto "
       >
-        <div class="flex flex-col items-center justify-between mb-6 space-y-2">
+        <div class="md:flex flex-col items-center mb-6 space-y-2 mt-1 hidden">
           {
             title ? (
-              <h1 id={`modal-${id}-title`} class="text-2xl xl:text-6xl">
+              <h1 id={`modal-${id}-title`} class="text-3xl xl:text-6xl font-black pt-6">
                 {title}
               </h1>
             ) : (
@@ -53,7 +53,7 @@ const { title, subtitle, id } = Astro.props;
           }
           {
             subtitle ? (
-              <p id={`modal-${id}-subtitle`} class="text-sm text-neutral-500">
+              <p id={`modal-${id}-subtitle`} class="text-md font-mono text-neutral-500">
                 {subtitle}
               </p>
             ) : (
@@ -63,13 +63,13 @@ const { title, subtitle, id } = Astro.props;
         </div>
         <div
           id={`modal-${id}-content`}
-          class="relative w-auto pb-8 text-center"
+          class="w-fit overflow-y-auto scrollbar-hide"
         >
           <slot />
         </div>
         <div
           id={`modal-${id}-footer`}
-          class="flex flex-col-reverse sm:flex-row sm:justify-between sm:space-x-2"
+          class="w-full h-fit flex flex-row justify-center items-center sm:space-x-2 border-t-2 border-t-light pt-2 xl:hidden"
         >
           <slot name="footer" />
         </div>

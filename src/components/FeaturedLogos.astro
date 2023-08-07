@@ -3,6 +3,11 @@ import { Image } from "astro:assets";
 import PracticalWisdomLogo from "../assets/logos/practicalWisdomLogo.astro";
 import UlitaLogo from "../assets/logos/ulitaLogo.astro";
 import PruvodceBroumovemLogo from "../assets/logos/pruvodceBroumovemLogo.astro";
+import pruvodceScreenshot from "../assets/screenshots/pruvodceScreenshot.png"
+import ulitaScreenshot from "../assets/screenshots/ulitaScreenshot.png"
+import pwScreenshot from "../assets/screenshots/pwScreenshot.png"
+
+
 
 interface Props {
   className?: string;
@@ -10,28 +15,58 @@ interface Props {
 }
 
 const {
-  className = "flex flex-row justify-evenly items-center space-x-6 h-full text-left",
+  className = "flex flex-row justify-evenly items-center space-x-6 h-full text-left flex-nowrap",
   fullDescription = false,
 } = Astro.props;
 ---
-
-<ul aria-label="Featured Collaborators" class={className}>
-  <li class="max-w-lg">
-    <a href="https://practicalwisdom.uk" target="_blank"
-      ><PracticalWisdomLogo className="md:max-h-32 max-h-28 my-4" /></a
-    >
+<ul class="snap-y snap-mandatory text-left space-y-14 xl:space-y-0 xl:flex xl:flex-row xl:justify-between xl:items-baseline xl:space-x-12" aria-label="Featured Collaborators" class={className}>
+  <a class="lg:hover:dark:bg-light/20 lg:hover:bg-dark/20 rounded-md px-2 py-4 transition-all duration-100 ease-in-out active:scale-90 landscape:max-w-lg landscape:md:max-w-xl snap-mandatory snap-center lg:max-w-lg flex flex-col justify-between items-center h-fit w-full" href="https://practicalwisdom.uk" target="_blank"
+  >
+   <PracticalWisdomLogo className="max-h-24 p-1 xl:h-48 xl:w-fit mb-6 " />
     {
       fullDescription ? (
-        <div><hr/>
-          <h3 class="my-2 xs:my-5 text-md xs:text-lg"><span>Assignment:</span>&nbsp;Website design and development</h3><hr/>
+        <div>
+          <h3 class=" text-center py-2 xs:py-5 text-md xs:text-lg border-y-2 border-y-dark dark:border-y-light">&nbsp;Website design and development</h3>
           <p class="text-lg font-mono py-4">{"Practical Wisdom is a coaching non-profit with a big heart and an even bigger mission. I had the privilege of designing and developing their WordPress site, creating an online platform that truly reflects their dedication to changing lives. Behind the scenes, I streamlined their IT workflow, managing systems, email servers, CRM, and marketing. This project was a great opportunity to demonstrate my technical skills while supporting a cause I believe in."}</p>
-        </div>
+          <Image class="max-w-full h-fit rounded-md" src={pwScreenshot} alt={"Practical Wisdom"} width={pwScreenshot.width} height={pwScreenshot.height} format="webp" />
+          </div>
       ) : (
         ""
       )
-    }
-  </li>
- 
+    }</a
+    >
+  
+  <a class="lg:hover:dark:bg-light/20 lg:hover:bg-dark/20 rounded-md px-2 py-4 transition-all duration-100 ease-in-out active:scale-90 landscape:max-w-lg landscape:md:max-w-xl snap-mandatory snap-center lg:max-w-lg flex flex-col justify-between items-center h-fit w-full" href="https://ulita.org" target="_blank"
+  >
+   <UlitaLogo className="max-h-24 p-1 xl:h-48 xl:w-fit mb-6 " />  
+    {
+      fullDescription ? (
+        <div>
+          <h3 class=" text-center py-2 xs:py-5 text-md xs:text-lg border-y-2 border-y-dark dark:border-y-light">&nbsp;Website re-design and development, Domain administration</h3>
+          <p class="text-lg font-mono py-4">{"Working with DDM Ulita Broumov was an adventure in creativity. I redesigned their website using WordPress, creating a digital space that showcases their diverse range of courses. From pottery to climbing, each course has its unique place on the site. I also handled domain administration, ensuring a smooth and secure online experience. This project allowed me to blend my passion for web development with my love for learning and creativity."}</p>
+          <Image class="max-w-full h-fit rounded-md" src={ulitaScreenshot} alt={"DDM Ulita Broumov"} width={ulitaScreenshot.width} height={ulitaScreenshot.height} format="webp" />
+          </div>
+      ) : (
+        ""
+      )
+    }</a
+    >
+  
+  <a class="lg:hover:dark:bg-light/20 lg:hover:bg-dark/20 rounded-md px-2 py-4 transition-all duration-100 ease-in-out active:scale-90 landscape:max-w-lg landscape:md:max-w-xl snap-mandatory snap-center lg:max-w-lg flex flex-col justify-between items-center h-fit w-full" href="https://pruvodcebroumovem.cz" target="_blank"
+  >
+  <PruvodceBroumovemLogo className="max-h-24 p-1 xl:h-48 xl:w-fit mb-6 " />
+    {
+      fullDescription ? (
+        <div>
+          <h3 class=" text-center py-2 xs:py-5 text-md xs:text-lg border-y-2 border-y-dark dark:border-y-light">&nbsp;Website development</h3>
+          <p class="text-lg font-mono py-4">{"Pruvodce Broumovem is a project that brings the history of Broumov to life. Using Astro, AlpineJS, and Netlify, I developed a website that offers a guided tour through this charming town. The site combines historical elements with modern design, creating an engaging and educational experience for users. This project was a great opportunity to use cutting-edge technologies to tell a fascinating story"}</p>
+          <Image class="max-w-full h-fit rounded-md" src={pruvodceScreenshot} alt={"Pruvodce Broumovem"} width={pruvodceScreenshot.width} height={pruvodceScreenshot.height} format="webp" />
+          </div>
+      ) : (
+        ""
+      )
+    }</a
+    >
 
   <style>
     .featuredLogo {

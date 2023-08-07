@@ -1,6 +1,33 @@
 ---
+import FeaturedLogos from "./FeaturedLogos.astro";
 import FullScreenModal from "./FullScreenModal.astro";
-import ProjectsList from "./ProjectsList.astro";
+
+type TailwindSize = 
+  | "0.5rem" // 2 in Tailwind
+  | "0.75rem" // 3 in Tailwind
+  | "1rem" // 4 in Tailwind
+  | "1.25rem" // 5 in Tailwind
+  | "1.5rem" // 6 in Tailwind
+  | "1.75rem" // 7 in Tailwind
+  | "2rem" // 8 in Tailwind
+  | "2.25rem" // 9 in Tailwind
+  | "2.5rem" // 10 in Tailwind
+  | "3rem" // 12 in Tailwind
+  | "3.5rem" // 14 in Tailwind
+  | "4rem" // 16 in Tailwind
+  | "5rem" // 20 in Tailwind
+  | "6rem" // 24 in Tailwind
+  | "8rem" // 32 in Tailwind
+  | "10rem" // 40 in Tailwind
+  | "12rem" // 48 in Tailwind
+  | "16rem" // 64 in Tailwind
+  | "20rem" // 80 in Tailwind
+  | "24rem" // 96 in Tailwind
+  | "32rem" // 128 in Tailwind
+  | "40rem" // 160 in Tailwind
+  | "48rem" // 192 in Tailwind
+  | "56rem" // 224 in Tailwind
+  | "64rem" // 256 in Tailwind;
 
 interface Props {
   size: TailwindSize;
@@ -12,13 +39,12 @@ const { size, className, gitHubLink } = Astro.props;
 ---
 
 <!-- Music Credits -->
-<FullScreenModal id={2} title="Music Credits">
+<a class="active:scale-75 transition-all duration-100" aria-label="My Music Credits" href="https://tidal.com/browse/credits/20269946" target="_blank">
   <div
-    slot="trigger"
+ 
     class="flex flex-col flex-none justify-center items-center flex-wrap"
   >
     <svg
-      slot="trigger"
       height={size}
       width={size}
       xmlns="http://www.w3.org/2000/svg"
@@ -30,11 +56,9 @@ const { size, className, gitHubLink } = Astro.props;
       ></path>
     </svg>
     <span class="font-mono xl:text-lg">Music</span>
-  </div>
-  <section id="musicPlaylist"></section>
-</FullScreenModal>
+  </div></a>
 <!-- GitHub -->
-<a href={gitHubLink} target="_blank"
+<a class="active:scale-75 transition-all duration-100" href={gitHubLink} target="_blank"
   ><div
     slot="trigger"
     class="flex flex-col flex-none justify-center items-center flex-wrap"
@@ -53,10 +77,10 @@ const { size, className, gitHubLink } = Astro.props;
   </div>
 </a>
 <!-- Projects -->
-<FullScreenModal id={1} title="Projects">
+<FullScreenModal id={1} title="My Recent Projects" subtitle="Take a look at what I'm up to...">
   <div
     slot="trigger"
-    class="flex flex-col flex-none justify-center items-center flex-wrap"
+    class="flex flex-col flex-none justify-center items-center flex-wrap active:scale-75 transition-all duration-100"
   >
     <svg
       height={size}
@@ -70,7 +94,10 @@ const { size, className, gitHubLink } = Astro.props;
     </svg>
     <span class="font-mono xl:text-lg">Projects</span>
   </div>
-  <ProjectsList />
+  <!-- Content -->
+  <FeaturedLogos className="mt-2 flex flex-col flex-nowrap justify-center items-center w-fit scrollbar-hide" fullDescription={true} />
+ 
+  <span slot="footer" class="font-mono">Scroll/swipe for another project 👉</span>
 </FullScreenModal>
 
 <style></style>

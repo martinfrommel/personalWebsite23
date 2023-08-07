@@ -11,7 +11,19 @@ module.exports = {
         serif: ["Rockwell"],
         mono: ["VT323"],
       },
+      colors: {
+        dark: "#303037",
+        light: "#e2e9e0",
+      },
+    },
+    screens: {
+      xs: "370px",
+      ...defaultTheme.screens,
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("tailwind-scrollbar-hide"),
+  ],
 };
