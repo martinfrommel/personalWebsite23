@@ -1,23 +1,28 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import FeaturedLogos from '../components/FeaturedLogos.astro';
-import { Image } from 'astro:assets';
-import promoPhoto from '../assets/promoPhoto1.jpeg'
+import Layout from "../layouts/Layout.astro";
+import FeaturedLogos from "../components/FeaturedLogos.astro";
+import { Image } from "astro:assets";
+import promoPhoto from "../assets/promoPhoto1.jpeg";
 ---
 
 <Layout title="Hey, I'm Martin!">
-<div id="hero" class="max-w-fit scale-90 xs:scale-1003 text-center space-y-4 py-4 px-2 flex justify-center flex-nowrap flex-col items-center absolute portrait:top-1/3 z-20">
-	<h1 class="font-bold text-4xl md:portrait:text-7xl md:text-5xl xl:text-8xl">Hey, I'm Martin</h1>
-	<h3 class="font-sans text-2xl max-w-xs md:portrait:text-3xl md:portrait:max-w-md md:max-w-sm xl:max-w-xl xl:text-3xl">
-		I love crafting web apps that rock, resonating with the rhythm of innovation, and summiting the peaks of open-source.
-	</h3>
-	<p class="font-mono text-lg"><span class="font-bold">Contact me at:&nbsp;</span><a class="hover:border-b-2 hover:dark:border-b-light hover:border-b-dark transition-all duration-200 ease-in-out" href="mailto:martin@mixdock.co.uk">martin@mixdock.co.uk</a></p>
-</div>
-<!-- <Image class={"rounded-md max-h-36 w-auto relative top-1/4"} src={promoPhoto} alt={"Hey, it's me!"} width={promoPhoto.width} height={promoPhoto.height} format='webp' /> -->
-
-<!-- <div class="relative top-1/4 z-0 xl:landscape:flex flex-col justify-center items-center space-y-6 h-fit w-fit max-w-full max-h-64 bg-light/20 rounded-md px-6 py-4 landscape:hidden">
-	<h2>My recent projects and collaborations</h2>
-	<FeaturedLogos className="flex flex-row justify-evenly items-center space-x-6 h-full" />
-
-</div> -->
+  <div
+    id="hero"
+    class="max-w-fit text-center space-y-4 py-4 px-2 flex justify-center flex-nowrap flex-col items-center absolute lg:portrait:top-auto portrait:top-1/3 z-20"
+  >
+    <h1 class="font-bold text-3xl sm:text-4xl md:portrait:text-7xl md:text-5xl xl:text-8xl">
+      Hey, I'm Martin
+    </h1>
+    <h2
+      class="font-sans text-md sm:text-2xl max-w-xs md:portrait:text-3xl md:portrait:max-w-md md:max-w-sm xl:max-w-xl xl:text-3xl"
+    >
+      I love crafting web apps that rock, resonating with the rhythm of
+      innovation, and summiting the peaks of open-source.
+    </h2>
+    <p class="font-mono text-md xl:text-lg">
+      <span class="font-bold">Contact me at:&nbsp;</span><a
+        class="hover:border-b-2 hover:dark:border-b-light hover:border-b-dark transition-all duration-200 ease-in-out"
+        href="mailto:martin@mixdock.co.uk">martin@mixdock.co.uk</a>
+    </p>
+  </div>
 </Layout>
