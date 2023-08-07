@@ -15,12 +15,12 @@ interface Props {
 }
 
 const {
-  className = "flex flex-row justify-evenly items-center space-x-6 h-full text-left flex-nowrap",
+  className = "snap-y snap-mandatory text-left space-y-14 xl:space-y-0 xl:flex xl:flex-row xl:justify-between xl:items-baseline xl:space-x-12",
   fullDescription = false,
 } = Astro.props;
 ---
-<ul class="snap-y snap-mandatory text-left space-y-14 xl:space-y-0 xl:flex xl:flex-row xl:justify-between xl:items-baseline xl:space-x-12" aria-label="Featured Collaborators" class={className}>
-  <a class="lg:hover:dark:bg-light/20 lg:hover:bg-dark/20 rounded-md px-2 py-4 transition-all duration-100 ease-in-out active:scale-90 landscape:max-w-lg landscape:md:max-w-xl snap-mandatory snap-center lg:max-w-lg flex flex-col justify-between items-center h-fit w-full" href="https://practicalwisdom.uk" target="_blank"
+<ul aria-label="Featured Collaborators" class={className}>
+  <a class="lg:hover:dark:bg-light/20 lg:hover:bg-dark/20 rounded-md px-2 py-4 transition-all duration-100 ease-in-out active:scale-90 landscape:max-w-lg landscape:md:max-w-xl snap-start snap-always lg:max-w-lg flex flex-col justify-between items-center h-fit w-full" href="https://practicalwisdom.uk" target="_blank"
   >
    <PracticalWisdomLogo className="max-h-24 p-1 xl:h-48 xl:w-fit mb-6 " />
     {
@@ -36,7 +36,7 @@ const {
     }</a
     >
   
-  <a class="lg:hover:dark:bg-light/20 lg:hover:bg-dark/20 rounded-md px-2 py-4 transition-all duration-100 ease-in-out active:scale-90 landscape:max-w-lg landscape:md:max-w-xl snap-mandatory snap-center lg:max-w-lg flex flex-col justify-between items-center h-fit w-full" href="https://ulita.org" target="_blank"
+  <a class="lg:hover:dark:bg-light/20 lg:hover:bg-dark/20 rounded-md px-2 py-4 transition-all duration-100 ease-in-out active:scale-90 landscape:max-w-lg landscape:md:max-w-xl snap-start snap-always lg:max-w-lg flex flex-col justify-between items-center h-fit w-full" href="https://ulita.org" target="_blank"
   >
    <UlitaLogo className="max-h-24 p-1 xl:h-48 xl:w-fit mb-6 " />  
     {
@@ -52,7 +52,7 @@ const {
     }</a
     >
   
-  <a class="lg:hover:dark:bg-light/20 lg:hover:bg-dark/20 rounded-md px-2 py-4 transition-all duration-100 ease-in-out active:scale-90 landscape:max-w-lg landscape:md:max-w-xl snap-mandatory snap-center lg:max-w-lg flex flex-col justify-between items-center h-fit w-full" href="https://pruvodcebroumovem.cz" target="_blank"
+  <a class="lg:hover:dark:bg-light/20 lg:hover:bg-dark/20 rounded-md px-2 py-4 transition-all duration-100 ease-in-out active:scale-90 landscape:max-w-lg landscape:md:max-w-xl snap-start snap-always lg:max-w-lg flex flex-col justify-between items-center h-fit w-full" href="https://pruvodcebroumovem.cz" target="_blank"
   >
   <PruvodceBroumovemLogo className="max-h-24 p-1 xl:h-48 xl:w-fit mb-6 " />
     {
@@ -75,6 +75,10 @@ const {
 
     .featuredLogo #light {
       @apply dark:fill-dark fill-light transition-all ease-in-out;
+    }
+
+     {
+      @apply border-b-2 border-b-light
     }
   </style>
 </ul>

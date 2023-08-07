@@ -21,3 +21,6 @@ pnpm-debug.log*
 .DS_Store
 
 .astro
+
+# Google Analytics config
+components/Analytics.astro

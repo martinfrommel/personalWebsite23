@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import FeaturedLogos from '../components/FeaturedLogos.astro';
+import { Image } from 'astro:assets';
+import promoPhoto from '../assets/promoPhoto1.jpeg'
 ---
 
 <Layout title="Hey, I'm Martin!">
@@ -10,6 +12,8 @@ import FeaturedLogos from '../components/FeaturedLogos.astro';
 		I love crafting web apps that rock, resonating with the rhythm of innovation, and summiting the peaks of open-source.
 	</h3>
 </div>
+<!-- <Image class={"rounded-md max-h-36 w-auto relative top-1/4"} src={promoPhoto} alt={"Hey, it's me!"} width={promoPhoto.width} height={promoPhoto.height} format='webp' /> -->
+
 <!-- <div class="relative top-1/4 z-0 xl:landscape:flex flex-col justify-center items-center space-y-6 h-fit w-fit max-w-full max-h-64 bg-light/20 rounded-md px-6 py-4 landscape:hidden">
 	<h2>My recent projects and collaborations</h2>
 	<FeaturedLogos className="flex flex-row justify-evenly items-center space-x-6 h-full" />

@@ -77,7 +77,7 @@ const { size, className, gitHubLink } = Astro.props;
   </div>
 </a>
 <!-- Projects -->
-<FullScreenModal id={1} title="My Recent Projects" subtitle="Take a look at what I'm up to...">
+<FullScreenModal windowId="projects-section" id={1} title="My Recent Projects" subtitle="Take a look at what I'm up to...">
   <div
     slot="trigger"
     class="flex flex-col flex-none justify-center items-center flex-wrap active:scale-75 transition-all duration-100"
@@ -95,9 +95,9 @@ const { size, className, gitHubLink } = Astro.props;
     <span class="font-mono xl:text-lg">Projects</span>
   </div>
   <!-- Content -->
-  <FeaturedLogos className="mt-2 flex flex-col flex-nowrap justify-center items-center w-fit scrollbar-hide" fullDescription={true} />
+  <FeaturedLogos className="mt-2 flex flex-col flex-nowrap justify-center items-center w-fit scrollbar-hide snap-y snap-mandatory scroll-smooth text-left space-y-14 xl:space-y-0 xl:flex xl:flex-row xl:justify-between xl:items-baseline xl:space-x-12" fullDescription={true} />
  
-  <span slot="footer" class="font-mono">Scroll/swipe for another project 👉</span>
+  <span slot="footer" class="font-mono">Scroll for other projects 👇</span>
 </FullScreenModal>
 
 <style></style>
