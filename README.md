@@ -1,54 +1,21 @@
-# Astro Starter Kit: Basics
+# 🚀 Web Development Portfolio 🚀
 
-```
-npm create astro@latest -- --template basics
-```
+Hello there! 👋 Welcome to my portfolio, a collection of my web development projects. I'm a passionate web developer with a background in Music Production 🎵, Teaching and Learning in the Creative Industries 🎓, and a love for climbing 🧗‍♂️ and outdoor activities 🏕️. 
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🎸 Tagline
+"I love crafting web apps that rock, resonating with the rhythm of innovation, and summiting the peaks of open-source."
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 📚 Portfolio Projects
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+### 1. Practical Wisdom 🌱
+A coaching non-profit based in Brighton, UK on a mission to change a million lives. I had the privilege of designing and developing their WordPress site, creating an online platform that truly reflects their dedication to changing lives. I also managed their IT workflow, ensuring a smooth and efficient digital experience.
 
-## 🚀 Project Structure
+### 2. DDM Ulita Broumov 🎨
+A free-time non-profit company in the Czech Republic offering a range of courses. I redesigned their website using WordPress, creating a digital space that showcases their diverse range of courses. I also handled domain administration, ensuring a smooth and secure online experience.
 
-Inside of your Astro project, you'll see the following folders and files:
+### 3. Pruvodce Broumovem 🏰
+An EU-sponsored, non-profit project offering a guided tour through the lovely historic town of Broumov. I developed a website using Astro, AlpineJS, and Netlify, creating an engaging and educational experience for users.
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 📬 Get in Touch
+I'm currently open to new opportunities and would love to hear from you! Feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/your-linkedin-profile) or via email at your-email@example.com.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
