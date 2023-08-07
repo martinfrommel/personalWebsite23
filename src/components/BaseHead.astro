@@ -3,15 +3,16 @@ import { ViewTransitions } from 'astro:transitions';
 import Analytics from './Analytics.astro';
 interface Props  {
     title: string;
+    description?: string;
 
 }
 
-const {title} = Astro.props
+const {title, description = "Discover the portfolio of a seasoned web developer with a diverse background in music, education, and outdoor activities. Explore projects that demonstrate a commitment to innovative web solutions and open-source technologies."} = Astro.props
 ---
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description">
+    <meta name="description" content=`${description}`>
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/webp" href="/favicon.webp" />
     <meta name="generator" content={Astro.generator} />
