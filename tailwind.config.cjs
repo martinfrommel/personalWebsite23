@@ -7,9 +7,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["EB Garamond Variable"],
-        serif: ["Rockwell"],
-        mono: ["VT323"],
+        sans: ["EB Garamond Variable", ...defaultTheme.fontFamily.sans],
+        serif: ["Rockwell", ...defaultTheme.fontFamily.serif],
+        mono: ["VT323", ...defaultTheme.fontFamily.mono],
       },
       colors: {
         dark: "#303037",
