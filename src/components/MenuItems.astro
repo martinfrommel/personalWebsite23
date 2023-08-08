@@ -108,9 +108,9 @@ const { size, className, gitHubLink } = Astro.props;
   <!-- Modal Content -->
   <section
     id="socialMediaLinks"
-    class="flex flex-col flex-none justify-start items-center flex-wrap space-y-8"
+    class="flex flex-col flex-none justify-start items-center flex-wrap space-y-8 landscape:flex-row landscape:justify-center landscape:space-y-0 landscape:space-x-8 landscape:lg:flex-col landscape:lg:justify-start landscape:lg:space-x-0 landscape:lg:space-y-8"
   >
-  <SocialMediaLinks size={size} />
+  <SocialMediaLinks size={size} instaHandle={"soundtechjesus"} linkedInHandle={"martin-frommel"} telegramHandle={"soybeandelautismo"} />
   </section>
 </FullScreenModal>
 <style>
