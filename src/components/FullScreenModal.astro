@@ -4,9 +4,11 @@ interface Props {
   title?: string;
   subtitle?: string;
   windowId: string;
+  footer?: boolean;
+  heading?: boolean;
 }
 
-const { title, subtitle, id, windowId } = Astro.props;
+const { title, subtitle, id, windowId, footer = false, heading = true } = Astro.props;
 ---
 
 <div
@@ -42,7 +44,7 @@ const { title, subtitle, id, windowId } = Astro.props;
       <div
         class="relative flex flex-col flex-nowrap items-center justify-evenly w-full overflow-auto "
       >
-        <div class="md:flex flex-col items-center mb-6 space-y-2 mt-1 hidden">
+        { heading ? <div class="flex flex-col items-center mb-6 space-y-2 mt-1">
           {
             title ? (
               <h1 id={`modal-${id}-title`} class="text-3xl xl:text-6xl font-black pt-6">
@@ -61,19 +63,19 @@ const { title, subtitle, id, windowId } = Astro.props;
               ""
             )
           }
-        </div>
+        </div> : ""}
         <div
           id={`modal-${id}-content`}
           class="w-fit overflow-y-auto scrollbar-hide"
         >
           <slot />
         </div>
-        <div
+        {footer ? <div
           id={`modal-${id}-footer`}
-          class="w-full h-fit flex flex-row justify-center items-center sm:space-x-2 border-t-2 border-t-light pt-2 xl:hidden"
+          class="w-full h-fit flex flex-row justify-center items-center sm:space-x-2 border-t-2 border-t-light pt-2"
         >
           <slot name="footer" />
-        </div>
+        </div> : ""}
       </div>
     </div>
   </template>

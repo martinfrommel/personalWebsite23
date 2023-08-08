@@ -20,7 +20,7 @@ const {
 } = Astro.props;
 ---
 <ul aria-label="Featured Collaborators" class={className}>
-  <a class="lg:hover:dark:bg-light/20 lg:hover:bg-dark/20 rounded-md px-2 py-4 transition-all duration-100 ease-in-out active:scale-90 landscape:max-w-lg landscape:md:max-w-xl snap-start snap-always lg:max-w-lg flex flex-col justify-between items-center h-fit w-full" href="https://practicalwisdom.uk" target="_blank"
+  <a class="projectItem" href="https://practicalwisdom.uk" target="_blank"
   >
    <PracticalWisdomLogo className="max-h-24 p-1 xl:h-48 xl:w-fit mb-6 " />
     {
@@ -36,7 +36,7 @@ const {
     }</a
     >
   
-  <a class="lg:hover:dark:bg-light/20 lg:hover:bg-dark/20 rounded-md px-2 py-4 transition-all duration-100 ease-in-out active:scale-90 landscape:max-w-lg landscape:md:max-w-xl snap-start snap-always lg:max-w-lg flex flex-col justify-between items-center h-fit w-full" href="https://ulita.org" target="_blank"
+  <a class="projectItem" href="https://ulita.org" target="_blank"
   >
    <UlitaLogo className="max-h-24 p-1 xl:h-48 xl:w-fit mb-6 " />  
     {
@@ -52,7 +52,7 @@ const {
     }</a
     >
   
-  <a class="lg:hover:dark:bg-light/20 lg:hover:bg-dark/20 rounded-md px-2 py-4 transition-all duration-100 ease-in-out active:scale-90 landscape:max-w-lg landscape:md:max-w-xl snap-start snap-always lg:max-w-lg flex flex-col justify-between items-center h-fit w-full" href="https://pruvodcebroumovem.cz" target="_blank"
+  <a class="projectItem" href="https://pruvodcebroumovem.cz" target="_blank"
   >
   <PruvodceBroumovemLogo className="max-h-24 p-1 xl:h-48 xl:w-fit mb-6 " />
     {
@@ -78,7 +78,11 @@ const {
     }
 
      {
-      @apply border-b-2 border-b-light
+      @apply border-b-2 border-b-light;
+    }
+
+    .projectItem {
+      @apply lg:hover:dark:bg-light/20 lg:hover:bg-dark/20 rounded-md px-2 py-4 transition-all duration-100 ease-in-out active:scale-90 landscape:max-w-lg landscape:md:max-w-xl snap-start snap-always lg:max-w-lg flex flex-col justify-between items-center h-fit w-full;
     }
   </style>
 </ul>
