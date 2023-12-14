@@ -84,35 +84,30 @@ const { size, className, gitHubLink } = Astro.props;
 
   <span slot="footer" class="font-mono">Scroll for other projects 👇</span>
 </FullScreenModal>
-<FullScreenModal
-  windowId="socials-section"
-  id={3}
-  title="Socials"
-  subtitle="...where you can find me."
+  <!-- Socials -->
+<a
+class="menuItem"
+aria-label="My Music Credits"
+href="https://linktr.ee/martinfrommel"
+target="_blank"
 >
-  <!-- Modal Trigger -->
-  <div slot="trigger" class="modalMenuItem">
-    <svg
-      height={size}
-      width={size}
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-    >
-      <path
-        fill="currentColor"
-        d="M2 3H0v18h24V3H2zm20 2v14H2V5h20zM10 7H6v4h4V7zm-6 6h8v4H4v-4zm16-6h-6v2h6V7zm-6 4h6v2h-6v-2zm6 4h-6v2h6v-2z"
-      ></path>
-    </svg>
-    <span class="font-mono xl:text-lg">Socials</span>
-  </div>
-  <!-- Modal Content -->
-  <section
-    id="socialMediaLinks"
-    class="flex flex-col flex-none justify-start items-center flex-wrap space-y-8 landscape:flex-row landscape:justify-center landscape:space-y-0 landscape:space-x-8 landscape:lg:flex-col landscape:lg:justify-start landscape:lg:space-x-0 landscape:lg:space-y-8"
-  >
-  <SocialMediaLinks size={size} instaHandle={"soundtechjesus"} linkedInHandle={"martin-frommel"} telegramHandle={"soybeandelautismo"} />
-  </section>
-</FullScreenModal>
+<div class="flex flex-col flex-none justify-center items-center flex-wrap">
+  <svg
+  height={size}
+  width={size}
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+>
+  <path
+    fill="currentColor"
+    d="M2 3H0v18h24V3H2zm20 2v14H2V5h20zM10 7H6v4h4V7zm-6 6h8v4H4v-4zm16-6h-6v2h6V7zm-6 4h6v2h-6v-2zm6 4h-6v2h6v-2z"
+  ></path>
+</svg>
+  <span class="font-mono xl:text-lg">Socials</span>
+</div></a
+>
+
+
 <style>
   .modalMenuItem {
     @apply flex flex-col flex-none justify-center items-center flex-wrap active:scale-90 transition-all duration-100 hover:cursor-pointer;
